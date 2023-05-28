@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  background-color: aliceblue;
+  height: 50vh;
+}
+
+.main {
+  background: red;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.picture{
+  width: 100%;
+  background-image: url("https://picsum.photos/1920/1080");
+  display: flex;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+    li{
+    list-style: none;
+    display: inline-flex;
+    margin: 10px;
+  }
+}
+

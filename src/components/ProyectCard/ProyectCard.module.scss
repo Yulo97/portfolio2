@@ -1,0 +1,16 @@
+.container{
+    transition: all 500ms;
+    border-radius: 0;
+    // background-color: #009e66;
+}
+
+.cardMedia{
+    &:hover{
+        transform: scale(0.96);
+        transition: all 300ms;
+}}
+
+.aButtom{
+    text-decoration: none;
+    color: white;
+}

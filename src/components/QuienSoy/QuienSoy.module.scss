@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 8vh;
+    h5{
+        margin-bottom: 25px;
+        color: #7c838e;
+    }
+    h4{
+        color: #fff;
+        font-family: Poppins;
+        margin: 10px 0 20px 0;
+    }
+}
+
+.divider{
+    font-size: 50px;
+    font-family: 'Arial';
+    position: relative;
+    bottom: 25px;
+}
+
+.parrafo{
+    color: #7c838e;
+    text-align: justify;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.image{
+    @media (max-width: 600px) {
+        height: 400px;
+    }
+}
+
+.tarjetasContent{
+@media (max-width: 1200px) {
+    margin: 15px auto;
+
+}}
+
+@media (max-width: 1200px) {
+    .textoPresentacion {
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+  }

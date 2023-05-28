@@ -1,0 +1,12 @@
+.sectionCertificados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagenCertificado{
+    margin: 25px;
+    &{
+        cursor: pointer;
+    }
+}

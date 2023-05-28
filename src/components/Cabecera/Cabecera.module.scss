@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    background-color: aliceblue;
+    height: 100vh;
+    background-color: #101010;
+    background-image: url("/fotos/perfil-cabecera.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    padding: 100px 100px 0 15vw ;
+    gap: 15px;
+
+    @media (max-width: 750px) {
+      padding: 100px 0 0 5vw ;
+      /* Otros estilos para pantallas de 750px o menos */
+    }
+
+    .button{
+      width: 250px;
+      height: 50px;
+      border-radius: 0;
+      margin-top: 25px;
+    }
+    h3{
+      font-size: 100px;
+      font-weight: 700;
+      font-family: 'Montserrat';
+      line-height: 50px;
+      span{
+        font-size: 30px;
+        color: #009e66
+      }
+    }
+    h1{
+      font-size: 40px;
+      position: relative;
+      span{
+        color: #009e66;
+        font-family: 'Courier New', Courier, monospace;
+        position: relative;
+        bottom: 25px;
+      }
+    }
+    h2{
+      font-family: Poppins;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+  }
+  
+  .picture{
+    display: flex;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      align-items: flex-end;
+    }
+
+      li{
+      list-style: none;
+      display: inline-flex;
+      margin: 10px;
+    }
+  }
+
+  
