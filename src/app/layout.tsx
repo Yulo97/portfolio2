@@ -4,6 +4,8 @@ import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { useState, useEffect } from "react";
+import { Box, CircularProgress } from "@mui/material";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -40,6 +42,33 @@ const theme = createTheme({
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return (
+      <html lang="en">
+        <body className={inter.className}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Box
+              sx={{
+                position: "absolute",
+                top: "50%",
+                right: "50%",
+              }}
+            >
+              <CircularProgress color="primary" />
+            </Box>
+          </ThemeProvider>
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang="en">
       <body className={inter.className}>

@@ -8,6 +8,17 @@
     background-repeat: no-repeat;
     background-position: right;
   }
+
+  .contenedorIconos{
+    padding-right: 20px;
+    li:hover {
+      cursor: pointer;
+    }
+    li a{
+      text-decoration: none;
+      color: white;
+    }
+  }
   
   .main {
     display: flex;
@@ -18,7 +29,6 @@
 
     @media (max-width: 750px) {
       padding: 100px 0 0 5vw ;
-      /* Otros estilos para pantallas de 750px o menos */
     }
 
     .button{
