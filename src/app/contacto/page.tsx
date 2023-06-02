@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { FormEvent } from "react";
 import {
   TextField,
   Button,
@@ -11,9 +11,9 @@ import {
 } from "@mui/material";
 
 const ContactForm = () => {
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
+    alert("Los envios de este formulario estan desabilitados");
   };
 
   return (
@@ -39,7 +39,18 @@ const ContactForm = () => {
                 label="Acepto los términos y condiciones"
               />
             </Grid>
-            <Button type="submit" variant="contained" color="primary" size="large">
+            <Grid item xs={12}>
+              <Typography variant="body1" color="secondary">
+                Los envios de este formulario se encuentran desabilitados
+              </Typography>
+            </Grid>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{ borderRadius: 0 }}
+            >
               Enviar
             </Button>
           </Grid>
