@@ -11,7 +11,6 @@ import {
   CardContent,
   Hidden,
 } from "@mui/material";
-import Image from "next/image";
 
 const QuienSoy = () => {
   return (
@@ -52,14 +51,14 @@ const QuienSoy = () => {
             <Typography variant="h4" color="initial">
               Giuliano De Vito
             </Typography>
-            <Typography variant="p" color="initial" className={styles.parrafo}>
+            <Typography variant="body1" className={styles.parrafo}>
               Me considero una persona autodidacta, busco aprender e instruirme en cada situación y
               con las personas que trabajo. Me apasiona la programación, el análisis y el desarrollo
               de nuevos proyectos. Creando soluciones y automatizando procesos para que sean mas
               sencillos y optimos.
             </Typography>
             <Box sx={{ width: "100%" }}>
-              <Grid container className={styles.tarjetas} spacing={4}>
+              <Grid container className={styles.tarjetas} spacing={4} sx={{ mt: "5px" }}>
                 <Grid item xs={6}>
                   <Card
                     sx={{

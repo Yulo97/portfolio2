@@ -29,7 +29,6 @@
 .tarjetas{
     display: flex;
     justify-content: center;
-    margin-top: 5px;
 }
 
 .image{
@@ -41,7 +40,6 @@
 .tarjetasContent{
 @media (max-width: 1200px) {
     margin: 15px auto;
-
 }}
 
 @media (max-width: 1200px) {
