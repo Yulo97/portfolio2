@@ -15,6 +15,10 @@ function Cabecera() {
     setWidth(window.innerWidth);
   }, []);
 
+  // const handleDownload = () => {
+  //   window.location.download = "/cv.pdf";
+  // };
+
   return (
     <Grid container className={styles.container}>
       <Grid item xs={11} className={styles.main}>
@@ -30,9 +34,11 @@ function Cabecera() {
           I'm Giuliano De Vito
         </h1>
         <h2>Programador Full Stack</h2>
-        <Button variant="contained" className={styles.button} size="large">
-          Descargar CV
-        </Button>
+        <a href="/cv.pdf" download="/cv.pdf">
+          <Button variant="contained" className={styles.button} size="large">
+            Descargar CV
+          </Button>
+        </a>
       </Grid>
       <Grid item xs={1} className={styles.picture}>
         <ul className={styles.contenedorIconos}>

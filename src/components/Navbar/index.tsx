@@ -25,7 +25,7 @@ const Navbar = () => {
     },
     {
       title: "Descargar CV",
-      path: "/contacto",
+      path: "/cv.pdf",
       button: true,
     },
   ];
@@ -41,17 +41,29 @@ const Navbar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               GIULIANO DE VITO
             </Typography>
-            {menus.map((item) => (
-              <Button
-                key={item.title}
-                variant={item.button ? "contained" : "text"}
-                color={item.button ? "primary" : "inherit"}
-                sx={{ borderRadius: 0, marginLeft: "25px" }}
-                href={item.path}
-              >
-                {item.title}
-              </Button>
-            ))}
+            {menus.map((item) =>
+              item.button ? (
+                <a href="/cv.pdf" download="/cv.pdf" key={item.title}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{ borderRadius: 0, marginLeft: "25px" }}
+                  >
+                    {item.title}
+                  </Button>
+                </a>
+              ) : (
+                <Button
+                  key={item.title}
+                  variant="text"
+                  color="inherit"
+                  sx={{ borderRadius: 0, marginLeft: "25px" }}
+                  href={item.path}
+                >
+                  {item.title}
+                </Button>
+              )
+            )}
           </Toolbar>
         </Box>
 
