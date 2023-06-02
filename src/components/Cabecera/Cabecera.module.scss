@@ -51,10 +51,8 @@
       font-size: 40px;
       position: relative;
       span{
-        color: #009e66;
-        font-family: 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
         position: relative;
-        bottom: 25px;
+        bottom: 11px;
       }
     }
     h2{
@@ -65,6 +63,10 @@
     }
   }
   
+  .barra{
+    margin-right: 10px;
+  }
+
   .picture{
     display: flex;
     ul {

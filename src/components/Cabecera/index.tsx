@@ -22,7 +22,12 @@ function Cabecera() {
           Hello<span> ■</span>
         </h3>
         <h1>
-          <span>__</span> I'm Giuliano De Vito
+          <span className={styles.barra}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="3">
+              <rect width="100%" height="100%" fill="#009e66" />
+            </svg>
+          </span>
+          I'm Giuliano De Vito
         </h1>
         <h2>Programador Full Stack</h2>
         <Button variant="contained" className={styles.button} size="large">
