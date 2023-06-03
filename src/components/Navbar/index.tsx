@@ -43,7 +43,12 @@ const Navbar = () => {
             </Typography>
             {menus.map((item) =>
               item.button ? (
-                <a href="/cv.pdf" download="/cv.pdf" key={item.title}>
+                <a
+                  href="/cv.pdf"
+                  download="/cv.pdf"
+                  key={item.title}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
                   <Button
                     variant="contained"
                     color="primary"
