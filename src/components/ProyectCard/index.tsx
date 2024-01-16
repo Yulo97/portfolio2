@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import styles from "./ProyectCard.module.scss";
+import { useTranslation } from "react-i18next";
 
 interface IProyect {
   title: string;
@@ -17,6 +18,8 @@ interface IProyect {
 }
 
 const ProyectCard = ({ title, image, description, technologys, path }: IProyect) => {
+  const [t] = useTranslation("global");
+
   return (
     <Card
       sx={{ width: 350, margin: "auto", height: 500, display: "flex", flexDirection: "column" }}
@@ -28,7 +31,7 @@ const ProyectCard = ({ title, image, description, technologys, path }: IProyect)
           {title}
         </Typography>
         <Typography gutterBottom variant="body1" component="p">
-          <strong>Tecnologias: </strong>
+          <strong>{t("card-proyects.technologies")} </strong>
           {technologys}
         </Typography>
         <Typography gutterBottom variant="body1" component="p">
@@ -38,7 +41,7 @@ const ProyectCard = ({ title, image, description, technologys, path }: IProyect)
       <CardActions>
         <Button size="large" variant="contained" sx={{ borderRadius: 0, m: 1 }}>
           <a href={path} target="_blank" className={styles.aButtom}>
-            Visitar
+            {t("button.view")}
           </a>
         </Button>
       </CardActions>

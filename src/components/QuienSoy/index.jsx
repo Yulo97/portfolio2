@@ -11,16 +11,19 @@ import {
   CardContent,
   Hidden,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const QuienSoy = () => {
+  const [t] = useTranslation("global");
+
   return (
     <Container>
       <Box className={styles.container}>
         <Typography variant="h5" color="initial">
-          Biografia
+          {t("title.biography")}
         </Typography>
         <Typography variant="h2" color="white">
-          Quien Soy
+          {t("title.about-me")}
         </Typography>
         <Typography variant="span" color="primary" className={styles.divider}>
           ___
@@ -36,7 +39,7 @@ const QuienSoy = () => {
               lg={2}
               sx={{ color: "primary ", margin: "0 30px 0 30px" }}
             >
-              ME
+              INFO
             </Divider>
           </Hidden>
           <Grid
@@ -46,16 +49,13 @@ const QuienSoy = () => {
             sx={{ display: "flex", alignItems: "flex-start", flexDirection: "column" }}
           >
             <Typography variant="h6" color="primary">
-              Sobre Mi
+              {t("me.who-i-am")}
             </Typography>
             <Typography variant="h4" color="initial">
               Giuliano De Vito
             </Typography>
             <Typography variant="body1" className={styles.parrafo}>
-              Me considero una persona autodidacta, busco aprender e instruirme en cada situación y
-              con las personas que trabajo. Me apasiona la programación, el análisis y el desarrollo
-              de nuevos proyectos. Creando soluciones y automatizando procesos para que sean mas
-              sencillos y optimos.
+              {t("me.about-me")}
             </Typography>
             <Box sx={{ width: "100%" }}>
               <Grid container className={styles.tarjetas} spacing={4} sx={{ mt: "5px" }}>
@@ -73,7 +73,7 @@ const QuienSoy = () => {
                   >
                     <CardContent>
                       <Typography variant="h6" color="primary">
-                        Pais
+                        {t("me.country")}
                       </Typography>
                       <p>Argentina</p>
                     </CardContent>
@@ -90,7 +90,7 @@ const QuienSoy = () => {
                   >
                     <CardContent>
                       <Typography variant="h6" color="primary">
-                        Ciudad
+                        {t("me.city")}
                       </Typography>
                       <p>Rosario, Santa Fe</p>
                     </CardContent>
@@ -110,7 +110,7 @@ const QuienSoy = () => {
                   >
                     <CardContent>
                       <Typography variant="h6" color="primary">
-                        Telefono
+                        {t("me.phone")}
                       </Typography>
                       <Typography variant="p" color="white">
                         +54 341 306 4343
@@ -129,7 +129,7 @@ const QuienSoy = () => {
                   >
                     <CardContent>
                       <Typography variant="h6" color="primary">
-                        Nacimiento
+                        {t("me.birth")}
                       </Typography>
                       <p>15 / 04 / 1997</p>
                     </CardContent>

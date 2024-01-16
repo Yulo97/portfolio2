@@ -6,6 +6,28 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState, useEffect } from "react";
 import { Box, CircularProgress } from "@mui/material";
+import { GlobalProvider } from "@/context/GlobalContext";
+
+//traductions
+import { I18nextProvider } from "react-i18next";
+import i18next from "i18next";
+import global_es from "../translations/es/global.json";
+import global_en from "../translations/en/global.json";
+
+i18next.init({
+  interpolation: {
+    escapeValue: false,
+  },
+  lng: "es",
+  resources: {
+    es: {
+      global: global_es,
+    },
+    en: {
+      global: global_en,
+    },
+  },
+});
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -72,11 +94,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Navbar />
-          {children}
-        </ThemeProvider>
+        <I18nextProvider i18n={i18next}>
+          <ThemeProvider theme={theme}>
+            {/* <GlobalProvider> */}
+            <CssBaseline />
+            <Navbar />
+            {children}
+            {/* </GlobalProvider> */}
+          </ThemeProvider>
+        </I18nextProvider>
       </body>
     </html>
   );

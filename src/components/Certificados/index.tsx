@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import styles from "./Certificados.module.scss";
+import { useTranslation } from "react-i18next";
 
 const certificados = [
   {
@@ -32,13 +33,15 @@ const settingContainer = {
 };
 
 const Certificados = () => {
+  const [t] = useTranslation("global");
+
   return (
     <Grid sx={{ ...settingContainer }}>
       <Typography variant="h5" color="initial" sx={{ mt: 3, color: "grey" }}>
-        Estudios
+        {t("title.studies")}
       </Typography>
       <Typography variant="h2" color="initial" sx={{ mt: 3, color: "white" }}>
-        Certificados
+        {t("title.certificates")}
       </Typography>
       <Typography color="primary" className="dividerGreen">
         ___

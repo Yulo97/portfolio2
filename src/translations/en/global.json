@@ -1,0 +1,59 @@
+{
+    "header": {
+        "hello": "Hello",
+        "me": "I'm Giuliano De Vito",
+        "work": "Full Stack Developer"
+    },
+    "button": {
+        "download-cv": "Download CV",
+        "home": "Home",
+        "contact": "Contact",
+        "view": "View"
+    },
+    "title": {
+        "biography": "Biography",
+        "about-me": "About Me",
+        "technology": "Technologies",
+        "my-stack": "My Stack",
+        "proyects": "Projects",
+        "studies": "Studies",
+        "certificates": "Certificates"
+        
+    },
+    "me": {
+        "about-me": "I consider myself a self-taught person, always seeking to learn and educate myself in every situation and with the people I work with. I am passionate about programming, analysis, and the development of new projects. Creating solutions and automating processes to make them simpler and more optimal.",
+        "about-me-subtitle": "About Me",
+        "country": "Country",
+        "phone": "Phone",
+        "city": "City",
+        "birth": "Birth",
+        "who-i-am": "Who I am?"
+    },
+    "card-proyects": {
+        "technologies": "Technologies",
+        "portfolio": {
+            "title": "Portfolio",
+            "description": "Presentation website"
+        },
+        "up-shop": {
+            "title": "Up Shop - Virtual Store",
+            "description": "E-commerce for SMEs, shopping cart, stock control."
+        },
+        "bg-web": {
+            "title": "Black Gestion - Website",
+            "description": "Website with the possibility of subscription to the platform."
+        },
+        "bg-automotor": {
+            "title": "Commercial Management Software",
+            "description": "Geared towards auto repair shops, stock control, sales, customer portfolio, etc."
+        }
+    },
+    "form-contact": {
+        "title": "Contact Form",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "check-conditions": "I accept the terms and conditions",
+        "btn-send": "Send"
+    }
+}

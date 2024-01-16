@@ -7,23 +7,23 @@ import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function Cabecera() {
   const [width, setWidth] = useState(0);
+
+  const [t] = useTranslation("global");
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 
-  // const handleDownload = () => {
-  //   window.location.download = "/cv.pdf";
-  // };
-
   return (
     <Grid container className={styles.container}>
       <Grid item xs={11} className={styles.main}>
         <h3>
-          Hello<span> ■</span>
+          {t("header.hello")}
+          <span> ■</span>
         </h3>
         <h1>
           <span className={styles.barra}>
@@ -31,12 +31,15 @@ function Cabecera() {
               <rect width="100%" height="100%" fill="#009e66" />
             </svg>
           </span>
-          I'm Giuliano De Vito
+          {t("header.me")}
         </h1>
-        <h2>Programador Full Stack</h2>
-        <a href="/cv.pdf" download="/cv.pdf">
+        <h2>{t("header.work")}</h2>
+        <a
+          target="#"
+          href="https://onedrive.live.com/?authkey=%21ADrstYzy3z8WH24&cid=D1C2EBA35D62423E&id=D1C2EBA35D62423E%212816&parId=root&o=OneUp"
+        >
           <Button variant="contained" className={styles.button} size="large">
-            Descargar CV
+            {t("button.download-cv")}
           </Button>
         </a>
       </Grid>

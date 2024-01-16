@@ -1,36 +1,70 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import { Box, Button, Drawer, Toolbar, IconButton } from "@mui/material";
-import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavDrawer } from "./NavDrawer";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const [t, i18n] = useTranslation("global");
+
   interface IMenu {
     title: string;
     path: string;
     button?: boolean;
   }
 
+  const [open, setOpen] = useState(false);
+
+  const changeLanguage = () => {
+    console.log(i18n.language);
+    const newLanguage = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
+  };
+
+  // En el componente donde inicializas tu aplicación, puedes agregar lógica para cargar el idioma desde localStorage al inicio.
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, []);
+
+  const translator = (
+    <>
+      <Button
+        variant="text"
+        color="inherit"
+        sx={{ borderRadius: 0, marginLeft: "25px" }}
+        onClick={changeLanguage}
+      >
+        <img
+          src={`/icons/flag-${i18n.language === "en" ? `argentina` : `united-kingdom`}.png`}
+          alt=""
+          width={"30px"}
+        />
+      </Button>
+    </>
+  );
+
   const menus: IMenu[] = [
     {
-      title: "Inicio",
+      title: t("button.home"),
       path: "/",
     },
     {
-      title: "Contacto",
+      title: t("button.contact"),
       path: "/contacto",
     },
     {
-      title: "Descargar CV",
-      path: "/cv.pdf",
+      title: t("button.download-cv"),
+      path: "https://onedrive.live.com/?authkey=%21ADrstYzy3z8WH24&cid=D1C2EBA35D62423E&id=D1C2EBA35D62423E%212816&parId=root&o=OneUp",
       button: true,
     },
   ];
-
-  const [open, setOpen] = useState(false);
 
   return (
     <nav>
@@ -41,11 +75,12 @@ const Navbar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               GIULIANO DE VITO
             </Typography>
+            {translator}
             {menus.map((item) =>
               item.button ? (
                 <a
-                  href="/cv.pdf"
-                  download="/cv.pdf"
+                  href="https://onedrive.live.com/?authkey=%21ADrstYzy3z8WH24&cid=D1C2EBA35D62423E&id=D1C2EBA35D62423E%212816&parId=root&o=OneUp"
+                  target="#"
                   key={item.title}
                   style={{ textDecoration: "none", color: "white" }}
                 >
@@ -80,6 +115,7 @@ const Navbar = () => {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             GIULIANO DE VITO
           </Typography>
+          {translator}
         </Toolbar>
       </AppBar>
 

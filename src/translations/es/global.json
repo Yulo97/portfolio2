@@ -1,0 +1,58 @@
+{
+    "header": {
+        "hello": "Hola",
+        "me": "Soy Giuliano De Vito",
+        "work": "Desarrollador Full Stack"
+    },
+    "button": {
+        "download-cv": "Descargar CV",
+        "home": "Inicio",
+        "contact": "Contacto",
+        "view": "Visitar"
+    },
+    "title": {
+        "biography": "Biografia",
+        "about-me": "Sobre mi",
+        "technology": "Tecnologias",
+        "my-stack": "Mi Stack",
+        "proyects": "Proyectos",
+        "studies": "Estudios",
+        "certificates": "Certificados"
+    },
+    "me": {
+        "about-me": "Me considero una persona autodidacta, busco aprender e instruirme en cada situación y con las personas que trabajo. Me apasiona la programación, el análisis y el desarrollo de nuevos proyectos. Creando soluciones y automatizando procesos para que sean mas sencillos y optimos.",
+        "about-me-subtitle": "Sobre mi",
+        "country": "Pais",
+        "phone": "Telefono",
+        "city": "Ciudad",
+        "birth": "Nacimiento",
+        "who-i-am": "Quien Soy?"
+    },
+    "card-proyects": {
+        "technologies": "Tecnologias",
+        "portfolio": {
+            "title": "Portafolio",
+            "description": "Sitio Web de presentacion"
+        },
+        "up-shop": {
+            "title": "Up Shop - Tienda Virtual",
+            "description": "Ecommerce para Pyme, carrito de compras, control de stock."
+        },
+        "bg-web": {
+            "title": "Black Gestion - Sitio Web",
+            "description": "Sitio web, con posibilidad de suscripcion a la plataforma."
+        },
+        "bg-automotor": {
+            "title": "Software de Gestion Comercial",
+            "description": "Orientado a talleres mecanicos, control de stock, ventas, cartera de clientes, etc."
+        }
+    },
+    "form-contact": {
+        "title": "Formulario de Contacto",
+        "name": "Nombre",
+        "email": "Correo Electronico",
+        "message": "Mensaje",
+        "check-conditions": "Acepto los términos y condiciones",
+        "btn-send": "Enviar"
+    }
+}

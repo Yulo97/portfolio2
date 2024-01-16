@@ -1,8 +1,18 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Container, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const NotFoundPage = () => {
+  const [t, i18n] = useTranslation("global");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, []);
+
   return (
     <Box
       display="flex"

@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import CardTechnology from "../TechnologyImg";
-import styles from "./Technology.module.scss";
+import { useTranslation } from "react-i18next";
 
 interface ITechnology {
   title: string;
@@ -76,6 +76,8 @@ const technology: ITechnology[] = [
 ];
 
 const Technology = () => {
+  const [t] = useTranslation("global");
+
   const settingSlider = {
     dots: false,
     infinite: true,
@@ -119,10 +121,10 @@ const Technology = () => {
   return (
     <Grid sx={{ ...settingContainer }}>
       <Typography variant="h5" color="grey">
-        Tecnologias
+        {t("title.technology")}
       </Typography>
       <Typography variant="h2" color="initial" sx={{ mt: 3, color: "white" }}>
-        My Stack
+        {t("title.my-stack")}
       </Typography>
       <Typography color="primary" className="dividerGreen">
         ___
