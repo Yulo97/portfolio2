@@ -19,7 +19,8 @@ function Cabecera() {
   }, []);
 
   return (
-    <Grid container className={styles.container}>
+    <Grid className={styles.container}>
+      <img src="/fotos/perfil-cabecera.png" className={styles.image} />
       <Grid item xs={11} className={styles.main}>
         <h3>
           {t("header.hello")}
