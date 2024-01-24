@@ -3,11 +3,20 @@ import React, { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import { Box, Button, Drawer, Toolbar, IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import { NavDrawer } from "./NavDrawer";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
-const Navbar = () => {
+// icons
+import MenuIcon from "@mui/icons-material/Menu";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+
+interface NavbarProps {
+  toggleTheme: () => void;
+  themeMode: string;
+}
+const Navbar: React.FC<NavbarProps> = ({ toggleTheme, themeMode }) => {
   const [t, i18n] = useTranslation("global");
 
   interface IMenu {
@@ -19,7 +28,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const changeLanguage = () => {
-    console.log(i18n.language);
     const newLanguage = i18n.language === "es" ? "en" : "es";
     i18n.changeLanguage(newLanguage);
     localStorage.setItem("language", newLanguage);
@@ -35,6 +43,14 @@ const Navbar = () => {
 
   const translator = (
     <>
+      <Button
+        variant="text"
+        color="inherit"
+        sx={{ borderRadius: 0, marginLeft: "25px" }}
+        onClick={toggleTheme}
+      >
+        {themeMode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+      </Button>
       <Button
         variant="text"
         color="inherit"
@@ -78,7 +94,7 @@ const Navbar = () => {
             {translator}
             {menus.map((item) =>
               item.button ? (
-                <a
+                <Link
                   href="https://onedrive.live.com/?authkey=%21ADrstYzy3z8WH24&cid=D1C2EBA35D62423E&id=D1C2EBA35D62423E%212816&parId=root&o=OneUp"
                   target="#"
                   key={item.title}
@@ -91,17 +107,17 @@ const Navbar = () => {
                   >
                     {item.title}
                   </Button>
-                </a>
+                </Link>
               ) : (
-                <Button
-                  key={item.title}
-                  variant="text"
-                  color="inherit"
-                  sx={{ borderRadius: 0, marginLeft: "25px" }}
-                  href={item.path}
-                >
-                  {item.title}
-                </Button>
+                <Link href={item.path} key={item.title} style={{ color: "inherit" }}>
+                  <Button
+                    variant="text"
+                    color="inherit"
+                    sx={{ borderRadius: 0, marginLeft: "25px" }}
+                  >
+                    {item.title}
+                  </Button>
+                </Link>
               )
             )}
           </Toolbar>
@@ -110,10 +126,10 @@ const Navbar = () => {
         {/* MENU RESPONSIVE */}
         <Toolbar sx={{ display: { xs: "flex", sm: "none" } }}>
           <IconButton aria-label="" size="large" onClick={() => setOpen(true)}>
-            <MenuIcon />
+            <MenuIcon sx={{ color: "white" }} />
           </IconButton>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            GIULIANO DE VITO
+            Menu
           </Typography>
           {translator}
         </Toolbar>

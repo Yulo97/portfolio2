@@ -37,10 +37,10 @@ const Certificados = () => {
 
   return (
     <Grid sx={{ ...settingContainer }}>
-      <Typography variant="h5" color="initial" sx={{ mt: 3, color: "grey" }}>
+      <Typography variant="h5" sx={{ mt: 3, opacity: 0.6 }}>
         {t("title.studies")}
       </Typography>
-      <Typography variant="h2" color="initial" sx={{ mt: 3, color: "white" }}>
+      <Typography variant="h2" sx={{ mt: 3 }}>
         {t("title.certificates")}
       </Typography>
       <Typography color="primary" className="dividerGreen">

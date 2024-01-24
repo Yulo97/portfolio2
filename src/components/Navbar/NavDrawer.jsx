@@ -13,10 +13,11 @@ export const NavDrawer = ({ navLinks, setOpen }) => {
         {navLinks.map((item) => (
           <ListItem key={item.title} disablePadding>
             <ListItemButton onClick={() => setOpen(false)}>
-              <a
+              <Link
                 href={item.path}
                 download={item.button && item.path}
-                style={{ textDecoration: "none", color: "white" }}
+                color="inherit"
+                style={{ textDecoration: "none", color: "inherit" }}
               >
                 {item.button ? (
                   <Button variant="contained" color="primary" sx={{ borderRadius: 0 }}>
@@ -27,7 +28,7 @@ export const NavDrawer = ({ navLinks, setOpen }) => {
                     {item.title}
                   </Button>
                 )}
-              </a>
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}

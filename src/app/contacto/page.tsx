@@ -21,6 +21,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language");
+    const savedTheme = localStorage.getItem("theme");
     if (savedLanguage) {
       i18n.changeLanguage(savedLanguage);
     }

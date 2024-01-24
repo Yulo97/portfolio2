@@ -120,10 +120,10 @@ const Technology = () => {
 
   return (
     <Grid sx={{ ...settingContainer }}>
-      <Typography variant="h5" color="grey">
+      <Typography variant="h5" sx={{ mt: 3, opacity: 0.6 }}>
         {t("title.technology")}
       </Typography>
-      <Typography variant="h2" color="initial" sx={{ mt: 3, color: "white" }}>
+      <Typography variant="h2" sx={{ mt: 3 }}>
         {t("title.my-stack")}
       </Typography>
       <Typography color="primary" className="dividerGreen">

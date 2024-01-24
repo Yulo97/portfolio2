@@ -19,12 +19,10 @@ const QuienSoy = () => {
   return (
     <Container>
       <Box className={styles.container}>
-        <Typography variant="h5" color="initial">
+        <Typography variant="h5" sx={{ mt: 3, opacity: 0.6 }}>
           {t("title.biography")}
         </Typography>
-        <Typography variant="h2" color="white">
-          {t("title.about-me")}
-        </Typography>
+        <Typography variant="h2">{t("title.about-me")}</Typography>
         <Typography variant="span" color="primary" className={styles.divider}>
           ___
         </Typography>
@@ -51,10 +49,8 @@ const QuienSoy = () => {
             <Typography variant="h6" color="primary">
               {t("me.who-i-am")}
             </Typography>
-            <Typography variant="h4" color="initial">
-              Giuliano De Vito
-            </Typography>
-            <Typography variant="body1" className={styles.parrafo}>
+            <Typography variant="h4">Giuliano De Vito</Typography>
+            <Typography variant="body1" className={styles.parrafo} sx={{ opacity: 0.7 }}>
               {t("me.about-me")}
             </Typography>
             <Box sx={{ width: "100%" }}>
@@ -112,9 +108,7 @@ const QuienSoy = () => {
                       <Typography variant="h6" color="primary">
                         {t("me.phone")}
                       </Typography>
-                      <Typography variant="p" color="white">
-                        +54 341 306 4343
-                      </Typography>
+                      <Typography variant="p">+54 341 306 4343</Typography>
                     </CardContent>
                   </Card>
                   <Card
