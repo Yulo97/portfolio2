@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState, useEffect } from "react";
 import { Box, CircularProgress } from "@mui/material";
+import Cookies from "js-cookie";
 
 //traductions
 import { I18nextProvider } from "react-i18next";
@@ -98,15 +99,12 @@ const createLightTheme = () => {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
-  const [themeMode, setThemeMode] = useState<string>(
-    localStorage.getItem("theme") === "light" ? "light" : "dark"
-  );
+  const [themeMode, setThemeMode] = useState<string>("dark");
 
-  // Función para cambiar el modo del tema
   const toggleTheme = () => {
     setThemeMode((prevMode) => {
-      localStorage.setItem("theme", prevMode === "dark" ? "light" : "dark");
-      return prevMode === "dark" ? "light" : "dark";
+      Cookies.set("theme", prevMode === "light" ? "dark" : "light");
+      return prevMode === "light" ? "dark" : "light";
     });
   };
 
@@ -114,6 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const theme = themeMode === "dark" ? createDarkTheme() : createLightTheme();
 
   useEffect(() => {
+    if (Cookies.get("theme") === "light") setThemeMode("light");
     setLoading(false);
   }, []);
 
