@@ -67,6 +67,7 @@ function Cabecera() {
             </Link>
           </li>
         </ul>
+        {/* <PageDivider /> */}
       </Grid>
     </Grid>
   );

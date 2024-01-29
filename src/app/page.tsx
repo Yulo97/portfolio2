@@ -6,6 +6,7 @@ import Certificados from "@/components/Certificados";
 import Proyects from "@/components/Proyects";
 import QuienSoy from "@/components/QuienSoy";
 import Technology from "@/components/Technology";
+import { PageDivider } from "@/components/PageDivider";
 
 export default function Home() {
   const [t, i18n] = useTranslation("global");
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Cabecera />
+      <PageDivider />
       <QuienSoy />
       <Technology />
       <Proyects />

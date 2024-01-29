@@ -19,7 +19,7 @@ const QuienSoy = () => {
   return (
     <Container>
       <Box className={styles.container}>
-        <Typography variant="h5" sx={{ mt: 3, opacity: 0.6 }}>
+        <Typography variant="h5" sx={{ opacity: 0.6 }}>
           {t("title.biography")}
         </Typography>
         <Typography variant="h2">{t("title.about-me")}</Typography>
