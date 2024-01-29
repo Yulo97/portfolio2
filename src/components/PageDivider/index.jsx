@@ -1,6 +1,5 @@
 import React from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
-import styles from "./PageDivider.module.css";
 
 export const PageDivider = () => {
   const isMobile = useMediaQuery("(max-width:768px)");
@@ -16,12 +15,13 @@ export const PageDivider = () => {
         preserveAspectRatio="none"
         viewBox="0 0 1200 120"
         xmlns="http://www.w3.org/2000/svg"
-        className={styles.main}
         style={{
           fill: theme.palette.primary.main,
           width: "150%",
           height: isMobile ? "75px" : "250px",
           transform: "scaleX(-1)",
+          position: "relative",
+          top: 0,
         }}
       >
         <path
