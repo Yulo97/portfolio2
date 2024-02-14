@@ -4,6 +4,8 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import styles from "./ProyectCard.module.scss";
@@ -13,7 +15,7 @@ interface IProyect {
   title: string;
   image: string;
   description: string;
-  technologys: string;
+  technologys: string[];
   path: string;
 }
 
@@ -22,7 +24,7 @@ const ProyectCard = ({ title, image, description, technologys, path }: IProyect)
 
   return (
     <Card
-      sx={{ width: 350, margin: "auto", height: 500, display: "flex", flexDirection: "column" }}
+      sx={{ margin: 1, height: 500, display: "flex", flexDirection: "column" }}
       className={styles.container}
     >
       <CardMedia sx={{ height: 300 }} image={image} title={title} className={styles.cardMedia} />
@@ -30,13 +32,21 @@ const ProyectCard = ({ title, image, description, technologys, path }: IProyect)
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
-        <Typography gutterBottom variant="body1" component="p">
-          <strong>{t("card-proyects.technologies")} </strong>
-          {technologys}
-        </Typography>
+
         <Typography gutterBottom variant="body1" component="p">
           {description}
         </Typography>
+        <Stack sx={{ display: "block" }}>
+          {technologys.map((item) => (
+            <Chip
+              label={item}
+              variant="outlined"
+              color="primary"
+              size="small"
+              sx={{ ml: 1, mt: 1 }}
+            />
+          ))}
+        </Stack>
       </CardContent>
       <CardActions>
         <Button size="large" variant="contained" sx={{ borderRadius: 0, m: 1 }}>
