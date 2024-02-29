@@ -54,5 +54,19 @@
         "message": "Mensaje",
         "check-conditions": "Acepto los términos y condiciones",
         "btn-send": "Enviar"
+    },
+    "works": {
+        "works": "Trabajos",
+        "experience": "Experiencia",
+        "today": "Actualidad",
+        "municipal": {
+            "position": "Desarrollador RPA"
+        },
+        "softing": {
+            "position": "Programador - MERN"
+        },
+        "freelance": {
+            "position": "Desarrollador Full Stack"
+        }
     }
 }

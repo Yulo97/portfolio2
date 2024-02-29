@@ -55,5 +55,19 @@
         "message": "Message",
         "check-conditions": "I accept the terms and conditions",
         "btn-send": "Send"
+    },
+    "works": {
+        "works": "Works History",
+        "experience": "Experience",
+        "today": "Today",
+        "municipal": {
+            "position": "RPA Developer"
+        },
+        "softing": {
+            "position": "Programmer - MERN"
+        },
+        "freelance": {
+            "position": "Full Stack Developer"
+        }
     }
 }
